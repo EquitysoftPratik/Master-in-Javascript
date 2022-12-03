@@ -355,8 +355,252 @@
 
 // ------------------------------ do while loop  ----------------------------------------------------------------
 
- let i = 0;
- do{
-     console.log(i);
-     i++;
-}while(i<=90);
+//  let i = 0;
+//  do{
+//      console.log(i);
+//      i++;
+// }while(i<=90);
+
+// ------------------------------ array  ----------------------------------------------------------------
+// array is ordered collection of items
+// array can store any datatyes
+
+// let fruites = ["apple","mango","banana"];
+// console.log(fruites);
+// console.log(fruites[1]);
+
+// let fruites = ["apple","mango","banana"];
+// console.log(fruites);
+// fruites[1] = "grapes";
+// console.log(fruites);
+// console.log(typeof fruites);
+// console.log(Array.isArray(fruites));
+
+// ------------------------------ array methods push,pop,shift,unshift  ----------------------------------------------------------------
+
+// let fruites = ["apple","mango","banana"];
+
+// push -->add element in last
+// console.log(fruites);
+// fruites.push("cheery");
+// console.log(fruites);
+
+// pop --> remove last element
+// fruites.pop();
+// console.log(fruites);
+
+// let popedFruit = fruites.pop();
+// console.log(popedFruit);
+
+// unshift --> add element in starting
+// fruites.unshift("cherry");
+// console.log(fruites);
+
+// shift --> remove elemt from start
+// fruites.shift();
+// console.log(fruites);
+
+
+// ------------------------------  premituve v/s refrence  ----------------------------------------------------------------
+
+// premitive type-->
+// let num1 = 6;
+// let num2 = num1;
+// console.log(num1);
+// console.log(num2);
+// num1++;
+// console.log(num1);
+// console.log(num2);
+
+// refrence type-->
+// let array1 = ["item1","item2"];
+// let array2 = array1;
+// console.log(array1);
+// console.log(array2);
+// // push one element
+// array1.push("item3");
+// console.log(array1);
+// console.log(array2);
+
+// ------------------------------  clone array ----------------------------------------------------------------
+
+// let array1 = ["item1","item2"];
+// let array2 = array1;
+// console.log(array1 === array2);
+
+// slice clone array from position hat passed in brcates
+// let array3 = array1.slice(0);
+// console.log(array3);
+
+// concate way to clone
+// let array4 = [].concat(array1);
+// console.log(array4);
+
+// new way
+// let array5 = [...array1];
+// console.log(array5);
+
+// add extra items in cloned array
+// let array6 = array1.slice(0).concat("item3","item4");
+// console.log(array6);
+
+// let array7 = [...array1,"item3","item4"];
+// console.log(array7);
+
+
+// ------------------------------  forloop in array ----------------------------------------------------------------
+
+// let fruites = ["apple","mango","grapes","banana"];
+
+// console.log(fruites.length);
+// console.log(fruites[1]);
+// console.log(fruites[fruites.length-1]);
+
+// let upperfruits = [];
+// for(let i=0 ; i < fruites.length; i++){
+//     console.log(fruites[i]);
+//     upperfruits.push(fruites[i].toUpperCase());
+// }
+// console.log(upperfruits);
+
+// ------------------------------  const for creating array ----------------------------------------------------------------
+
+// const fruites = ["apple","mango"];
+
+// fruites.push("banana");
+// console.log(fruites);
+
+// ------------------------------  while loop in array ----------------------------------------------------------------
+
+// const fruites = ["apple","mango","grapes","banana"];
+
+// let i = 0;
+// while(i<fruites.length){
+//     console.log(fruites[i]);
+//     i++;
+// }
+
+// ------------------------------  for off loop in array ----------------------------------------------------------------
+
+// const fruites = ["apple","mango","grapes","banana"];
+// for(let fruit of fruites){
+//     console.log(fruit);
+// }
+
+// ------------------------------  for in loop in array ----------------------------------------------------------------
+
+// const fruites = ["apple","mango","grapes","banana"];
+// for(let fruit of fruites){
+//     console.log(fruit);
+// }
+
+// ------------------------------  array destructing ----------------------------------------------------------------
+
+// const myArray = ["value1","value2"];
+// let myvar1 = myArray[0];
+// let myvar2 = myArray[1];
+// console.log(myvar1);
+// console.log(myvar2); 
+
+// let [myvar1,myvar2] = myArray;
+// console.log(myvar1);
+// console.log(myvar2); 
+
+// ------------------------------  objects ----------------------------------------------------------------
+// --> array are good but not sufficient for real world data
+// --> object stored key value pair
+// --> objects don't have index
+
+// -->how to create object
+
+// const person = {name:"Pratik",age:20}
+// console.log(person);
+// console.log(typeof person);
+
+// console.log(person.name);
+// console.log(person.age);
+
+// const person2 = {
+//     name:"Pratik",
+//     age:20,
+//     hobiiees : ["music","reading","tracking"]
+// }
+
+// console.log(person2.hobiiees);
+
+// const person3 = {
+//     name:"Pratik",
+//     age:20,
+//     hobiiees : ["music","reading","tracking"]
+// }
+// person3.gender ="male";
+// console.log(person3);
+
+
+// const person4 = {
+//     name:"Pratik",
+//     age:20,
+//     hobiiees : ["music","reading","tracking"]
+// }
+// console.log(person4["name"]);
+
+
+// ------------------------------  dot v/s bracates notation  ----------------------------------------------------------------
+
+// const person = {
+//     name:"Pratik",
+//     age:20,
+//     "person hobiiees" : ["music","reading","tracking"]
+// }
+// console.log(person["person hobiiees"]);
+
+
+// const key = "email";
+// const person1 = {
+//     name:"Pratik",
+//     age:20,
+//     "person hobiiees" : ["music","reading","tracking"]
+// }
+// person1[key] = "pratik@gmail.com"
+// console.log(person1);
+
+// ------------------------------ itterate(loop) object  ----------------------------------------------------------------
+
+// const person = {
+//     name:"Pratik",
+//     age:20,
+//     "person hobiiees" : ["music","reading","tracking"]
+// }
+
+// for(let key in person){
+//     // console.log(`${key} : ${person[key]}` );
+//     console.log(key,":",person[key]);
+// }
+
+
+// const person = {
+//     name:"Pratik",
+//     age:20,
+//     "person hobiiees" : ["music","reading","tracking"]
+// }
+
+// for(let key of Object.keys(person)){
+//     console.log(key,":",person[key]);
+// }
+
+
+// ------------------------------ computed properties  ----------------------------------------------------------------
+
+// const key1 = "objkey1";
+// const key2 ="objkey2";
+
+// const value1 = "myvalue1";
+// const value2 ="myvalue2";
+
+// const obj = {
+
+//     [key1] : value1,
+//     [key2] : value2
+
+// }
+// console.log(obj);
