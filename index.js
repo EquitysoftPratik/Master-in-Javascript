@@ -604,3 +604,225 @@
 
 // }
 // console.log(obj);
+
+
+// ------------------------------ spread operator  ----------------------------------------------------------------
+
+// // spread operator in array
+// const array1 = [1,2,3];
+// const array2 = [5,6,7];
+
+// // const newarray = [...array1,...array2,8,9];
+// const newarray = [..."123456789"]; //only string spread in array
+// console.log(newarray);
+
+// spread operator in object
+// const obj1 = {
+//     key1:"value1",
+//     key2:"value2"
+// };
+
+// const obj2 ={
+//     key3:"value3",
+//     key4:"value4"
+// }
+
+// const newobj={...obj1,...obj2,key5:"value5"};
+// const newobj={..."abc"};
+// console.log(newobj);
+
+// ------------------------------ object destructing  ----------------------------------------------------------------
+
+// object destructing
+
+// const band ={
+//     bandName:"BTS",
+//     famousSong:"any song"
+// };
+
+// const Var1 = band.bandName;
+
+// const {bandName} = band
+
+// const {bandName:var2} = band;
+
+// console.log(var2);
+
+// ------------------------------ objects inside array ----------------------------------------------------------------
+
+// const users = [
+//     {user_id:1,firstName:"Pratik",gender:"men"},
+//     {user_id:2,firstName:"Harsh",gender:"men"},
+//     {user_id:3,firstName:"Yash",gender:"men"}
+// ]
+
+// for(let user of users){
+//     console.log(user.firstName);
+// }
+
+
+// ------------------------------ Nested destructing ----------------------------------------------------------------
+
+
+// const users = [
+//     {user_id:1,firstName:"Pratik",gender:"men"},
+//     {user_id:2,firstName:"Harsh",gender:"men"},
+//     {user_id:3,firstName:"Yash",gender:"men"}
+// ]
+
+// const [{firstName},user1,user2,user3] = users;
+// console.log(firstName);
+// console.log(user2);
+
+
+// ------------------------------ Function declaration ----------------------------------------------------------------
+
+// function singHappyBirthday(){
+//     console.log("happy birthday");
+// }
+
+// singHappyBirthday();singHappyBirthday();singHappyBirthday();
+
+
+// function twoPlusFour(){
+//     console.log(2+4);
+// }
+// twoPlusFour();
+
+// return value
+// function twoPlusFour(){
+//     return 2+4;    
+// }
+// console.log(twoPlusFour());
+
+
+// function sum(num1,num2,num3){
+//     return num1 + num2 + num3;
+// }
+// console.log(sum(5,5,5));
+
+
+// odd or even
+// input : 1 Number
+// // output : true false
+// function isEven(number){
+//     if(number %2 === 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(isEven(2));
+
+// input string output first letter
+// function firstChar(anystring){
+//     return anystring[0];
+// }
+// console.log(firstChar("abc"));
+
+
+// input array , target (number)
+// output index of tareget if target present in array
+
+// function findArray(array,target){
+//     for(let i=0;i<array.length;i++){
+//         if(array[i]===target){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// const MyArray = [1,3,8,0,19];
+// console.log(findArray(MyArray,0));
+
+
+// ------------------------------ Function expression ----------------------------------------------------------------
+
+
+// const singHappyBirthday = function(){
+//     console.log("happy birth day bla bla");
+// }
+// singHappyBirthday();
+
+// const sum = function sum(num1,num2,num3){
+//     return num1 + num2 + num3;
+// }
+// console.log(sum(5,5,5));
+
+
+// const isEven = function(number){
+//         if(number %2 === 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(isEven(2));
+
+// const firstChar = function(anystring){
+//     return anystring[0];
+// }
+// console.log(firstChar("abc"));
+
+
+
+// ------------------------------ Arow Function ----------------------------------------------------------------
+
+// const singHappyBirthday = ()=> {
+//     console.log("happy birthday");
+// }
+// singHappyBirthday();singHappyBirthday();singHappyBirthday();
+
+
+// const twoPlusFour = ()=> {
+//     console.log(2+4);
+// }
+// twoPlusFour();
+
+// return value
+// const twoPlusFour = ()=> {
+//     return 2+4;    
+// }
+// console.log(twoPlusFour());
+
+
+// const sum = (num1,num2,num3)=> {
+//     return num1 + num2 + num3;
+// }
+// console.log(sum(5,5,5));
+
+
+// odd or even
+// input : 1 Number
+// // output : true false
+// const isEven =(number)=>{
+//     if(number %2 === 0){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(isEven(2));
+
+// input string output first letter
+// const firstChar = (anystring)=> {
+//     return anystring[0];
+// }
+// console.log(firstChar("abc"));
+
+
+// input array , target (number)
+// output index of tareget if target present in array
+
+// const findArray = (array,target)=> {
+//     for(let i=0;i<array.length;i++){
+//         if(array[i]===target){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// const MyArray = [1,3,8,0,19];
+// console.log(findArray(MyArray,3));
+
+// ------------------------------ Hoisting ----------------------------------------------------------------
