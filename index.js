@@ -826,3 +826,193 @@
 // console.log(findArray(MyArray,3));
 
 // ------------------------------ Hoisting ----------------------------------------------------------------
+// hello(); we can use function before decalaration is called hoisting that works with only function declaartion
+// function hello(){
+//      console.log("hello world");
+// }
+
+// console.log(hello);
+// const hello = "hello world";
+// console.log(hello);
+
+
+// ------------------------------ Function inside function ----------------------------------------------------------------
+
+// const app = ()=>{
+//      const myFunc = ()=>{
+//           console.log("hello from myFunc");
+//      }
+
+//      const addTwo = (num1,num2)=>{
+//           return num1+num2;
+//      }
+
+//      const mul = (num1,num2)=>{
+//           return num1 * num2;
+//      }
+
+//      console.log("inside app");
+//      myFunc();
+//      console.log(addTwo(2,3));
+//      console.log(mul(2,3));
+// }
+// app();
+
+// ------------------------------ Lexical Scope ----------------------------------------------------------------
+
+// function myApp(){
+
+//      const myVar = "Value1";
+
+//      function myFunc(){
+//           const myVar = "Value 59"; //commnet this line and chek diffrence
+//           const myFunc2 = ()=>{
+//                console.log("inside myFunc",myVar); 
+//           }
+//           myFunc2();
+//      }
+
+//      console.log(myVar);
+//      myFunc();
+// }
+// myApp();
+
+
+// ------------------------------ block scope vs function scope ----------------------------------------------------------------
+// let and const are block scope
+// var is function scope
+
+// {
+//      let fName = "Pratik";
+// }
+// console.log(fName);
+
+
+// {
+//      var firstName = "Pratik";
+// }
+// console.log(firstName);
+
+
+// if(true){
+//      let firstName = "Pratik"; // try with var keyword
+//      console.log(firstName);
+// }
+// console.log(firstName);
+
+
+// function myApp(){
+
+//      if(true){
+//           let firstName = "Pratik"; // try with var
+//           console.log(firstName);
+//      }
+//      console.log(firstName);
+
+// }
+// myApp();
+
+// ------------------------------ default parameter ----------------------------------------------------------------
+
+// function addTwo(a,b){
+//      if(typeof b === "undefined"){
+//           b=1;
+//      }
+//      return a+b;
+// }
+// const ans = addTwo(4);
+// console.log(ans);
+
+// function addTwo(a,b=5){
+//      return a+b;
+// }
+// const ans = addTwo(4);
+// console.log(ans);
+
+// ------------------------------ Rest parameter ----------------------------------------------------------------
+
+// function myFunc(a,b,c){
+//      console.log(`a is ${a}`);
+//      console.log(`b is ${b}`);
+//      console.log(`c is ${c}`);
+// }
+// myFunc(3,4,5,6,7,8);
+
+
+// function myFunc(a,b,...c){
+//      console.log(`a is ${a}`);
+//      console.log(`b is ${b}`);
+//      console.log(`c is ${c}`);
+// }
+// myFunc(3,4,5,6,7,8,9);
+
+
+// function addAll(...numbers){
+
+//      let total = 0;
+//      for (let number of numbers){
+//           total = total + number;
+//      }
+//      return total;
+
+// }
+// const ans = addAll(1,2,3,4,56,7);
+// console.log(ans);
+
+
+// ------------------------------ parameter destructing ----------------------------------------------------------------
+// used in object and react
+
+// const person ={
+//      firstName : "Pratik",
+//      gender : "male"
+// }
+
+// function printDEtails(obj){
+//      console.log(obj.firstName);
+//      console.log(obj.gender);
+// }
+// printDEtails(person);
+
+// function printDEtails({firstName,gender}){
+//      console.log(firstName);
+//      console.log(gender);
+// }
+// printDEtails(person);
+
+
+// ------------------------------ callback function ----------------------------------------------------------------
+
+// function myFunc2(name) {
+//      console.log('inside my func')
+//      console.log(`name is ${name}`)
+// }
+
+
+// function myFunc(callback) {
+//      console.log('hello here im function and ican ...')
+//      callback('pratik');
+// }
+// myFunc(myFunc2);
+
+
+// ------------------------------ function returning function ----------------------------------------------------------------
+
+// function myFunc(){
+//      return [1,2,3];
+// }
+// const ans = myFunc();
+// console.log(ans);
+
+function myFunc(){
+     function hello(){
+          return "hello";
+     }
+     return hello;
+}
+const ans = myFunc();
+console.log(ans);
+ans();
+
+
+// ------------------------------  ----------------------------------------------------------------
